@@ -19,9 +19,16 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
+        android:id="@+id/about_us_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="286dp"
-        tools:layout_editor_absoluteY="12dp" />
+        android:background="#AFAFAF"
+        android:text="о нас"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 </androidx.constraintlayout.widget.ConstraintLayout>
