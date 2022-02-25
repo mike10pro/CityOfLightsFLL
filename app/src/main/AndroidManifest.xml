@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.CityOfLightsFLL">
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CityOfLightsFLL">
-        <activity android:name=".StartActivity" android:exported="true">
+        android:theme="@style/Theme.CityOfLightsFLL"
+        tools:targetApi="m">
+        <activity
+            android:name=".AboutAsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -3,7 +3,7 @@
     <string-array name="list">
         <item>карта</item>
         <item>тест</item>
-        <item>всё</item>
+        <item>журнал</item>
     </string-array>
 
 </resources>

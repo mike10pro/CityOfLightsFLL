@@ -8,23 +8,26 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="413dp"
+        android:layout_height="734dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bg2" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bg2"
+        tools:srcCompat="@drawable/bg2_strelka" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="155dp"
-        android:layout_height="31dp"
+        android:layout_width="163dp"
+        android:layout_height="40dp"
         android:background="#00FFFFFF"
         android:entries="@array/list"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
@@ -34,8 +37,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#AFAFAF"
+        android:fontFamily="@font/roboto"
         android:text="о нас"
         android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.851"
