@@ -17,7 +17,7 @@ public class ServerUse {
         ExecutorService executorService = Executors.newFixedThreadPool(4);
         executorService.execute(() -> {
             try {
-                URL url = new URL("https://sityoflightsfllserver.herokuapp.com/");
+                URL url = new URL("http://192.168.0.99:8080/");
                 HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
                 httpConnection.setRequestMethod("POST");
 
@@ -53,4 +53,46 @@ public class ServerUse {
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
-});}}
+});}
+    public static void GetTest() {
+        ExecutorService executorService = Executors.newFixedThreadPool(4);
+        executorService.execute(() -> {
+            try {
+                URL url = new URL("http://192.168.0.99:8080/");
+                HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
+                httpConnection.setRequestMethod("POST");
+
+                httpConnection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+                httpConnection.setRequestProperty("Accept", "application/json");
+                httpConnection.setDoOutput(true);
+
+                JSONObject requestJSON = new JSONObject();
+                requestJSON.put("command", "test");
+
+                byte[] bytesToSend = requestJSON.toString().getBytes(StandardCharsets.UTF_8);
+                httpConnection.getOutputStream().write(bytesToSend);
+
+                BufferedReader in = new BufferedReader(
+                        new InputStreamReader(httpConnection.getInputStream()));
+                String input = in.readLine();
+
+                StringBuilder strBld = new StringBuilder();
+
+                while (input != null) {
+                    strBld.append(input);
+                    input = in.readLine();
+                }
+                JSONObject responseJSON = new JSONObject(strBld.toString());
+                String data = responseJSON.getString("data");
+                System.out.println(data);
+                if (data != null) {
+                    MainActivity.data = data;}
+                else {
+                    MainActivity.data = "None";
+                }
+
+            } catch (IOException | JSONException e) {
+                e.printStackTrace();
+            }
+        });}
+}

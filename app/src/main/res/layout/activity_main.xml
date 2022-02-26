@@ -16,8 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/bg2"
-        tools:srcCompat="@drawable/bg2_strelka" />
+        app:srcCompat="@drawable/bg2_strelka" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -30,7 +29,8 @@
         app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.023"
+        tools:listitem="@layout/spinner" />
 
     <Button
         android:id="@+id/about_us_main"

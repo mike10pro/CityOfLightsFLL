@@ -9,8 +9,12 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
     public static String data;
+    String var;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
                 String[] choose = getResources().getStringArray(R.array.list);
                 v[0] = selectedItemPosition;
+                var = choose[v[0]];
+                if (var.equals("тест")) {
+                    ServerUse.GetTest();
+                    System.out.println(data);
+                } else if (var.equals("журнал")) {
+                    ServerUse.GetProblems();
+                }
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
