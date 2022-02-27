@@ -1,8 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BookFragment"
     android:background="@drawable/bgfr"
-    />
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Если вы садитесь в машину, замечаете ли вы дым в салоне?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Чувствуете ли вы запах бензина или масла?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Чувствуете ли вы запах серы?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Чувствуете ли вы запах жженого дерева или резины?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Если вы садитесь за руль, то чувствуете вибрации и потряхивания рулевого колеса, или руль слишком &quot;свободный&quot;, или наоборот, слишком тугий?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Чувствуете ли вы вибрации, при нажатии педали тормоза?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="При повороте машины, производится ли скрип?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="При торможении машины, производится ли скрип?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Есть ли свист под капотом?"
+                android:textColor="@color/black"
+                app:backgroundTint="#00FFFFFF" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

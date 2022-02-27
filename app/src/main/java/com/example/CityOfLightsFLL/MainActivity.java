@@ -1,7 +1,10 @@
 package com.example.CityOfLightsFLL;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -41,12 +44,27 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println(data);
                 } else if (var.equals("журнал")) {
                     ServerUse.GetProblems();
+                    FragmentManager fm = getFragmentManager();
+                    Fragment f1 = new TestFragment();
+                    Fragment f2 = new BookFragment();
+
+                    if (savedInstanceState == null) {
+                        FragmentTransaction fragmentTransaction = fm
+                                .beginTransaction();
+                        final String TAG_1 = "FRAGMENT_1";
+                        fragmentTransaction.add(R.id.fragment, f2, TAG_1);
+                        fragmentTransaction.commit();
+                    }
                 }
             }
 
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
-        });
 
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
     }
 }
