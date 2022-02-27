@@ -15,9 +15,6 @@
         android:theme="@style/Theme.CityOfLightsFLL"
         tools:targetApi="m">
         <activity
-            android:name=".AboutAsActivity"
-            android:exported="false" />
-        <activity
             android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
@@ -30,8 +27,8 @@
 
         <meta-data
             android:resource="@array/preloaded_fonts"
-            android:name="com.google.android.geo.API_KEY"
-            android:value="${AIzaSyDLjTsIKnxcwCtf2CenQBqPiHduk29V_bI}" />
+            android:name="com.google.android.geo.API_KEY"/>
+<!--            android:value="${AIzaSyDLjTsIKnxcwCtf2CenQBqPiHduk29V_bI}" />-->
     </application>
 
 </manifest>
